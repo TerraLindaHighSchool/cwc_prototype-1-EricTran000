@@ -5,7 +5,6 @@ using UnityEngine;
 public class SpinPropellerX : MonoBehaviour
 {
    
-
     // Rotates the propeller
     void Update()
     {

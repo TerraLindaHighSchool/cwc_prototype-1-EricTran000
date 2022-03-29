@@ -7,13 +7,8 @@ public class FollowPlayerX : MonoBehaviour
     public GameObject plane;
     private Vector3 offset = new Vector3(20, 1, 0);
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
+    // Makes the camera follow the player
     void Update()
     {
         transform.position = plane.transform.position + offset;
