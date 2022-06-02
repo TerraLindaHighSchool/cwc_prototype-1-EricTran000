@@ -7,23 +7,45 @@ public class ObstacleSpawner : MonoBehaviour
     private bool isGameActive;
     private float spawnRate = 1.0f;
     private float spawnRange = 0.75f;
+    public Timer timeScript;
     
     public List<GameObject> obstacles;
-    public GameObject vechile;
+    public GameObject vehicle;
     // Start is called before the first frame update
     void Start()
     {
         isGameActive = true;
         StartCoroutine(Spawner());
         
-        
     }
 
     // Update is called once per frame
     void Update()
     {
- 
-        
+
+     
+
+        int time = timeScript.time;
+        if (time>30 && time<60)
+        {
+            spawnRate = 0.75f;
+        }
+        if (time > 60 && time< 120 )
+        {
+            spawnRate /= 0.65f;
+        }
+        if (time > 120 && time < 180)
+        {
+            spawnRate /= 0.5f;
+        }
+        if (time > 180)
+        {
+            spawnRate = 0.33f; 
+        }
+
+
+
+
     }
     IEnumerator Spawner()
     {
@@ -31,18 +53,11 @@ public class ObstacleSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnRate);
             int index = Random.Range(0, obstacles.Count);
-            //For the range it can spawn try finding the position of the vechile and then make sure it spawns in front
-            Instantiate(obstacles[index], (vechile.transform.position + new Vector3(0, 0, 20)), transform.rotation);
+            
+            //add something about having certain obstacles spawn if certain time has passed
+            Instantiate(obstacles[index], (vehicle.transform.position + new Vector3(0, 0, 120)), transform.rotation);
         }
 
     }
-    public void StartGame(int difficulty)
-    {
-        isGameActive = true;
-        spawnRate /= difficulty;
-        
-
-
-    }
+ 
 }
-

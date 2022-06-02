@@ -5,10 +5,11 @@ using UnityEngine;
 public class OutOfBounds : MonoBehaviour
 {
 
-    public GameObject Car;
+    private GameObject vehicle;
     // Start is called before the first frame update
     void Start()
     {
+        vehicle = GameObject.Find("Vehicle");
 
     }
 
@@ -16,7 +17,7 @@ public class OutOfBounds : MonoBehaviour
     void Update()
     {
         //MAKE SOMETHING IF TRANSFORM POSITION OF CAR IS GREATER THAN OBSTACLE BY 100 DELETE THE OBJECT
-        if (transform.position.x > 15 || transform.position.x < -15 || transform.position.y < -10)
+        if (transform.position.x > 15 || transform.position.x < -15 || transform.position.y < -10 || this.transform.position.z + 70 < (vehicle.transform.position.z))
         {
             Destroy(gameObject);
         }

@@ -502,10 +502,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2fa28e5b14a4643a183501c188ad63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeScript: {fileID: 82997900}
   obstacles:
   - {fileID: 4765209495856439304, guid: 98b3b0354bb33d54d89b1f8d50b1811b, type: 3}
   - {fileID: 5575113401156489568, guid: 941c54b0a0c311446b36c29596a3af3e, type: 3}
-  vechile: {fileID: 1100691569}
+  vehicle: {fileID: 1100691569}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,7 +766,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.6
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0

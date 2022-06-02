@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timeText;
 
     private bool timerActive;
-    private int time;
+    public int time { get; private set; }
     // Start is called before the first frame update
     void Start()
     {
