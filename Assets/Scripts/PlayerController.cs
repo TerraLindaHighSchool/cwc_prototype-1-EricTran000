@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/** 
+ * Moves Controls the player
+ * Author: Eric Tran
+ * Version: 6/6/2022
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +11,7 @@ public class PlayerController : MonoBehaviour
 {
     private GameObject center;
     private Rigidbody playerRb;
+    public ParticleSystem explosionParticle;
 
     private float speed = 5.0f;
     private float turnSpeed = 45.0f;
@@ -28,5 +34,14 @@ public class PlayerController : MonoBehaviour
         
         // Rotates the car based on horizontal input
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            explosionParticle.Play();
+        }
     }
 }

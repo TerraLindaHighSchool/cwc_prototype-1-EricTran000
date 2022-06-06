@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4765209495856439307}
   - component: {fileID: 4322111679800240478}
   - component: {fileID: 6786756519788538676}
+  - component: {fileID: -2246550776222434743}
   m_Layer: 0
   m_Name: Crate
   m_TagString: Obstacle
@@ -124,3 +125,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2760e4ee68c90354dbea953dd44d5541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &-2246550776222434743
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4765209495856439304}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.554324, y: 1.5543231, z: 1.5543228}
+  m_Center: {x: -0.0000019073486, y: 0.77716154, z: 0.0000009536743}

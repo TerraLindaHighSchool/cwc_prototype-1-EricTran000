@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/** 
+ * Allows the camera to follow the player
+ * Author: Eric Tran
+ * Version: 6/6/2022
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
